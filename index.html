@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Container Start -->
+    <div class="container">
+        <!-- Header Start -->
+        <section class="menu mt-3">
+            <!-- title start -->
+            <div class="title">
+                <h2 class="text-center">Asian Kitchen's Menu</h2>
+            </div>
+            <!-- title end -->
+        </section>
+        <!-- Header Start -->
+        <!-- Filter buttons Start -->
+        <ul class="list-inline text-center mt-5" id="list-inline">
+            <li class="list-inline-item"><button type="button" class="btn btn-outline-dark active" id="All"    onclick="filterSelection('all')">All</button></li>
+            <li class="list-inline-item"><button type="button" class="btn btn-outline-dark" id="Korea"  onclick="filterSelection('korea')">Korea</button></li>
+            <li class="list-inline-item"><button type="button" class="btn btn-outline-dark" id="Japan"  onclick="filterSelection('japan')">Japan</button></li>
+            <li class="list-inline-item"><button type="button" class="btn btn-outline-dark" id="China"  onclick="filterSelection('china')">China</button></li>
+        </ul>
+        <!-- Filter buttons End -->
+        <!-- Food Start -->
+        <div class="section-center row mt-5">
+        <div class="col-md-6 filterDiv korea" id="1">
+        <div class="row">
+        <div class="col-sm-4">
+        <img class="photo" src="https://twoplaidaprons.com/wp-content/uploads/2020/09/tteokbokki-top-down-view-of-tteokbokki-in-a-bowl-500x500.jpg" alt="">
+        </div>
+        <div class="col-sm-8">
+        <h4>Tteokbokki <span class="price mt-1">10.99</span></h4>
+        <hr>
+        <p class="mt-1">Spicy rice cakes, serving with fish cake.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 filterDiv japan" id="2">
+        <div class="row">
+        <div class="col-sm-4">
+        <img class="photo" src="https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg" alt="">
+        </div>
+        <div class="col-sm-8">
+        <h4>Chicken Ramen <span class="price mt-1">7.99</span></h4>
+        <hr>
+        <p class="mt-1">Chicken noodle soup, serving with vegetables such as soy bean, green onion. In an optional you can ask for egg.</p>
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv korea" id="3">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://dwellbymichelle.com/wp-content/uploads/2020/05/DWELL-bibimbap.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Bibimbap <span class="price mt-1">8.99</span></h4>
+            <hr>
+            <p class="mt-1">Boiling vegetables, serving with special hot sauce</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv china" id="4">
+                <div class="row">
+                <div class="col-sm-4">
+                <img class="photo" src="https://www.savingdessert.com/wp-content/uploads/2019/02/Dan-Dan-Noodles-10.jpg" alt="">
+                </div>
+                <div class="col-sm-8">
+                <h4>Dan Dan Mian <span class="price mt-1">5.99</span></h4>
+                <hr>
+                <p class="mt-1">Dan dan noodle, serving with green onion</p>
+                </div>
+                </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv china" id="5">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://salu-salo.com/wp-content/uploads/2013/02/Yangzhou-Fried-Rice1.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Yangzhou Fried Rice <span class="price mt-1">12.99</span></h4>
+            <hr>
+            <p class="mt-1">Yangzhou style fried rice, serving with bean and pickles</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv japan" id="6">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://www.manusmenu.com/wp-content/uploads/2017/08/Onigiri-3-1-of-1.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Onigiri <span class="price mt-1">7.99</span></h4>
+            <hr>
+            <p class="mt-1">Rice Sandwich, serving with soy sauce</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv korea" id="7">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Jajangmyeon <span class="price mt-1">15.99</span></h4>
+            <hr>
+            <p class="mt-1">Black bean sauce noodle, serving with green onion</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv china" id="8">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/F688C2F6-86EC-46C4-B9C7-A6BA01DF7437/Derivates/32E3E72A-F786-406D-AF7F-B30980A9AC6C.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Ma Yi Shang Shu<span class="price mt-1">12.99</span></h4>
+            <hr>
+            <p class="mt-1">Hot pepper sauce noodle, serving with soy bean and onion</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mt-5 filterDiv japan" id="9">
+            <div class="row">
+            <div class="col-sm-4">
+            <img class="photo" src="https://www.justonecookbook.com/wp-content/uploads/2011/10/Dorayaki-New-500x400.jpg" alt="">
+            </div>
+            <div class="col-sm-8">
+            <h4>Doroyaki <span class="price mt-1">3.99</span></h4>
+            <hr>
+            <p class="mt-1">Red bean paste dessert, serving with honey.</p>
+            </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- Food End -->
+    </div>
+    <!-- Container End -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
